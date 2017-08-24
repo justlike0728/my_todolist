@@ -16,8 +16,7 @@
 			<td><%= todolist.description %></td>
 			<td>
 				<%= link_to "編輯", edit_todolist_path(todolist), class: "btn btn-xs btn-default" %>
-				<%= link_to "刪除", todolist, method: "delete", data: { confirm: "確定刪除？" }, class: "btn btn-xs btn-danger" %>
-				
+				<%= link_to "刪除", todolist, method: "delete", data: { confirm: "確定刪除？" }, class: "btn btn-xs btn-danger" %>			
 			</td>
 		</tr>
 		<% end %>

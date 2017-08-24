@@ -31,6 +31,7 @@ class TodolistsController < ApplicationController
 	end
 
 	def destroy
+		@todolist = Todolist.find_by(id: params[:id])
 		@todolist.destroy
 		redirect_to todolists_path, notice: "待辦事項已刪除"
 	end
@@ -38,7 +39,7 @@ class TodolistsController < ApplicationController
 	private
 	  def find_todolist
 	  	@todolist = Todolist.find_by(id: params[:id])
-	  	redirect_to todolists_path, notice: "並無此待辦事項" if not @todlist
+	  	redirect_to todolists_path, notice: "並無此待辦事項" if not @todolist
 	  end
 
 	  def todolist_params
