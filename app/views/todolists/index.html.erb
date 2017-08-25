@@ -1,12 +1,13 @@
 <h1>todolist</h1>
 
-<%= link_to "新增待辦事項", new_todolist_path, class: "btn btn-primary"  %>
+<%= link_to "新增待辦事項", new_todolist_path, class: "btn btn-success"  %>
 
-<table class="table table-hover">
+<table class="table table-striped">
 	<thead>
 		<tr>
 			<th>名稱</th>
 			<th>描述</th>
+			<th>功能</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -15,7 +16,7 @@
 			<td><%= todolist.title %></td>
 			<td><%= todolist.description %></td>
 			<td>
-				<%= link_to "編輯", edit_todolist_path(todolist), class: "btn btn-xs btn-default" %>
+				<%= link_to "編輯", edit_todolist_path(todolist), class: "btn btn-xs btn-primary" %>
 				<%= link_to "刪除", todolist, method: "delete", data: { confirm: "確定刪除？" }, class: "btn btn-xs btn-danger" %>			
 			</td>
 		</tr>
